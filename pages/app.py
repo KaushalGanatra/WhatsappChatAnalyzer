@@ -2,7 +2,6 @@ import streamlit as st
 from streamlit_extras.switch_page_button import switch_page
 import pages.preprocessor as prep
 import pages.helper as helper
-import pages.fileread as fileread
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -53,8 +52,6 @@ if uploaded_file is not None:
     selected_user = st.sidebar.selectbox('Show Analysis',user_list)
 
     if st.sidebar.button('Show Analysis'):
-
-        fileread.upload_file(data)
         
         if df.empty:
             st.write("Choose different hour format")
