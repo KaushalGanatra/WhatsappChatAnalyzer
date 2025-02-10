@@ -26,7 +26,7 @@ def is_user_logged_in(username, password):
     )
     mycursor = mydb.cursor()
     
-    mycursor.execute("SELECT Password from userdata where username=%s", (username,))
+    mycursor.execute("SELECT password from user where username=%s", (username,))
     res = mycursor.fetchone()
     mydb.close()
     

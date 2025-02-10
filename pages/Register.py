@@ -19,7 +19,7 @@ def add_details(username,useremail,password):
     )
     mycursor = mydb.cursor()
 
-    sql = "INSERT into userdata (username,useremail,password) VALUES (%s,%s,%s)"
+    sql = "INSERT into user (username,useremail,password) VALUES (%s,%s,%s)"
     val=(username,useremail,password)
     mycursor.execute(sql,val)
     mydb.commit()
